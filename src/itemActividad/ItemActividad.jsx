@@ -5,12 +5,13 @@ import PropTypes from 'prop-types';
 
 function ItemActividad(props) {
     return(
-        <div style={{display:'flex', backgroundColor:'grey', margin:4, borderRadius:8, 
-        padding:4, alignItems: 'center'}}>
-            <div style={{display:'flex', width:20, height:20, margin:5}}>
+        <div className="item-actividad"
+        onClick={() => {props.viewDetail(props.data)}}
+        >
+            <div className="img-container">
                 <img src={props.data.estado ? Complete : Incomplete} className='imgStyle' />
             </div>
-            <div style={{display:'flex', flexDirection: 'column'}}>
+            <div className="text-container">
                 <p style={{margin: 0}}>{props.data.nombre}</p>
                 <p style={{margin: 0}}>{props.data.descripcion}</p>
                 <p style={{margin: 0}}>{props.data.fecha}</p>
@@ -20,7 +21,8 @@ function ItemActividad(props) {
 }
 
 ItemActividad.propTypes= {
-    data: PropTypes.array.isRequired,
+    data: PropTypes.object.isRequired,
+    viewDetail: PropTypes.func.isRequired,
   };
 
 export default ItemActividad;

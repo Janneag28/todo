@@ -2,4 +2,35 @@
     width: 20px;;
     height:'auto';
     object-fit: "cover";
-  };
+  }
+
+  .item-actividad {
+    display: flex;
+    background-color: grey;
+    margin: 4px;
+    border-radius: 8px;
+    padding: 4px;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .item-actividad:hover {
+    background-color: lightgrey;
+  }
+  
+  .img-container {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text-container p {
+    margin: 0;
+  }
